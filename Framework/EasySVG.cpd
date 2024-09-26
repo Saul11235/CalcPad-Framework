@@ -1,60 +1,225 @@
 #hide
-SVG_sizeX = 0
-SVG_sizeY = 0
-SVG_pointerX = 0
+SVG_sizeX = 5'<!--        Color Size Drawing  --> 
+SVG_sizeY = 5
+'<!-- ---------------------------------------------- -->'
+SVG_pointerX = 0'<!--     Color Pointer --> 
 SVG_pointerY = 0
-
+'<!-- ---------------------------------------------- -->'
+SVG_scaleFactor = 1'<!--  Color Scale Factor --> 
+#def SVG_scaleX$(realX$)
+	#hide
+	SVG_scaleFactor = SVG_sizeX/realX$
+#end def
+#def SVG_scaleY$(realY$)
+	#hide
+	SVG_scaleFactor = SVG_sizeY/realY$
+#end def
+'<!-- ---------------------------------------------- -->'
+#def SVG_randomNumber$ = floor(abs(re(random(255))))  
+'<!-- ---------------------------------------------- -->'
+SVG_colorTextR = 0'<!--   Color RGB text --> 
+SVG_colorTextG = 0
+SVG_colorTextB = 0
+SVG_fontsize = 16
+#def SVG_getcolorText$ = 'rgb('SVG_colorTextR','SVG_colorTextG','SVG_colorTextB')'    
+#def SVG_setcolorText$(SVG_red$; SVG_green$; SVG_blue$)
+	#hide
+	SVG_colorTextR = SVG_red$
+	SVG_colorTextG = SVG_green$
+	SVG_colorTextB = SVG_blue$
+#end def
+#def SVG_colorText_black$ = SVG_setcolorText$(0;0;0)
+#def SVG_colorText_white$ = SVG_setcolorText$(255;255;255)
+#def SVG_colorText_red$ = SVG_setcolorText$(250;0;0)
+#def SVG_colorText_green$ = SVG_setcolorText$(0;200;0)
+#def SVG_colorText_blue$ = SVG_setcolorText$(30;30;255)
+#def SVG_colorText_yellow$ = SVG_setcolorText$(255;255;0)
+#def SVG_colorText_cyan$ = SVG_setcolorText$(0;255;255)
+#def SVG_colorText_magenta$ = SVG_setcolorText$(255;0;255)
+#def SVG_colorText_purple$ = SVG_setcolorText$(128;0;128)
+#def SVG_colorText_orange$ = SVG_setcolorText$(255;140;0)
+#def SVG_colorText_gray$ = SVG_setcolorText$(190;190;190)
+#def SVG_colorText_darkred$ = SVG_setcolorText$(150;0;0)
+#def SVG_colorText_darkgreen$ = SVG_setcolorText$(0;100;0)
+#def SVG_colorText_darkblue$ = SVG_setcolorText$(0;0;100)
+#def SVG_colorText_darkyellow$ = SVG_setcolorText$(200;200;0)
+#def SVG_colorText_darkcyan$ = SVG_setcolorText$(0;150;150)
+#def SVG_colorText_darkmagenta$ = SVG_setcolorText$(150;0;150)
+#def SVG_colorText_darkpurple$ = SVG_setcolorText$(50;0;50)
+#def SVG_colorText_darkorange$ = SVG_setcolorText$(255;100;0)
+#def SVG_colorText_darkgray$ = SVG_setcolorText$(100;100;100)
+#def SVG_colorText_lightred$ = SVG_setcolorText$(250;150;150)
+#def SVG_colorText_lightgreen$ = SVG_setcolorText$(150;250;150)
+#def SVG_colorText_lightblue$ = SVG_setcolorText$(180;180;255)
+#def SVG_colorText_lightyellow$ = SVG_setcolorText$(255;255;120)
+#def SVG_colorText_lightcyan$ = SVG_setcolorText$(120;255;255)
+#def SVG_colorText_lightmagenta$ = SVG_setcolorText$(255;180;255)
+#def SVG_colorText_lightpurple$ = SVG_setcolorText$(240;140;240)
+#def SVG_colorText_lightorange$ = SVG_setcolorText$(255;220;120)
+#def SVG_colorText_lightgray$ = SVG_setcolorText$(230;230;230)
+#def SVG_colorText_random$ = SVG_setcolorText$(SVG_randomNumber$;SVG_randomNumber$;SVG_randomNumber$)
+'<!-- ---------------------------------------------- -->'
+SVG_colorLineR = 0'<!--   Color RGB Line--> 
+SVG_colorLineG = 0
+SVG_colorLineB = 0
+SVG_LineWidth = 1
+SVG_LineOpacity = 0.8
+#def SVG_getcolorLine$ = 'rgb('SVG_colorLineR','SVG_colorLineG','SVG_colorLineB')'    
+#def SVG_setcolorLine$(SVG_red$; SVG_green$; SVG_blue$)
+	#hide
+	SVG_colorLineR = SVG_red$
+	SVG_colorLineG = SVG_green$
+	SVG_colorLineB = SVG_blue$
+#end def
+#def SVG_colorLine_black$ = SVG_setcolorLine$(0;0;0)
+#def SVG_colorLine_white$ = SVG_setcolorLine$(255;255;255)
+#def SVG_colorLine_red$ = SVG_setcolorLine$(250;0;0)
+#def SVG_colorLine_green$ = SVG_setcolorLine$(0;200;0)
+#def SVG_colorLine_blue$ = SVG_setcolorLine$(30;30;255)
+#def SVG_colorLine_yellow$ = SVG_setcolorLine$(255;255;0)
+#def SVG_colorLine_cyan$ = SVG_setcolorLine$(0;255;255)
+#def SVG_colorLine_magenta$ = SVG_setcolorLine$(255;0;255)
+#def SVG_colorLine_purple$ = SVG_setcolorLine$(128;0;128)
+#def SVG_colorLine_orange$ = SVG_setcolorLine$(255;140;0)
+#def SVG_colorLine_gray$ = SVG_setcolorLine$(190;190;190)
+#def SVG_colorLine_darkred$ = SVG_setcolorLine$(150;0;0)
+#def SVG_colorLine_darkgreen$ = SVG_setcolorLine$(0;100;0)
+#def SVG_colorLine_darkblue$ = SVG_setcolorLine$(0;0;100)
+#def SVG_colorLine_darkyellow$ = SVG_setcolorLine$(200;200;0)
+#def SVG_colorLine_darkcyan$ = SVG_setcolorLine$(0;150;150)
+#def SVG_colorLine_darkmagenta$ = SVG_setcolorLine$(150;0;150)
+#def SVG_colorLine_darkpurple$ = SVG_setcolorLine$(50;0;50)
+#def SVG_colorLine_darkorange$ = SVG_setcolorLine$(255;140;0)
+#def SVG_colorLine_darkgray$ = SVG_setcolorLine$(100;100;100)
+#def SVG_colorLine_lightred$ = SVG_setcolorLine$(250;150;150)
+#def SVG_colorLine_lightgreen$ = SVG_setcolorLine$(150;250;150)
+#def SVG_colorLine_lightblue$ = SVG_setcolorLine$(180;180;255)
+#def SVG_colorLine_lightyellow$ = SVG_setcolorLine$(255;255;120)
+#def SVG_colorLine_lightcyan$ = SVG_setcolorLine$(120;255;255)
+#def SVG_colorLine_lightmagenta$ = SVG_setcolorLine$(255;180;255)
+#def SVG_colorLine_lightpurple$ = SVG_setcolorLine$(240;140;240)
+#def SVG_colorLine_lightorange$ = SVG_setcolorLine$(255;220;120)
+#def SVG_colorLine_lightgray$ = SVG_setcolorLine$(230;230;230)
+#def SVG_colorLine_random$ = SVG_setcolorLine$(SVG_randomNumber$;SVG_randomNumber$;SVG_randomNumber$)
+'<!-- ---------------------------------------------- -->'
+SVG_colorBackgroundR = 255'<!--   Color RGB Background --> 
+SVG_colorBackgroundG = 255
+SVG_colorBackgroundB = 255
+SVG_BackgroundOpacity = 0.8
+#def SVG_getcolorBackground$ = 'rgb('SVG_colorBackgroundR','SVG_colorBackgroundG','SVG_colorBackgroundB')'    
+#def SVG_setcolorBackground$(SVG_red$; SVG_green$; SVG_blue$)
+	#hide
+	SVG_colorBackgroundR = SVG_red$
+	SVG_colorBackgroundG = SVG_green$
+	SVG_colorBackgroundB = SVG_blue$
+#end def
+#def SVG_colorBackground_black$ = SVG_setcolorBackground$(0;0;0)
+#def SVG_colorBackground_white$ = SVG_setcolorBackground$(255;255;255)
+#def SVG_colorBackground_red$ = SVG_setcolorBackground$(250;0;0)
+#def SVG_colorBackground_green$ = SVG_setcolorBackground$(0;200;0)
+#def SVG_colorBackground_blue$ = SVG_setcolorBackground$(30;30;255)
+#def SVG_colorBackground_yellow$ = SVG_setcolorBackground$(255;255;0)
+#def SVG_colorBackground_cyan$ = SVG_setcolorBackground$(0;255;255)
+#def SVG_colorBackground_magenta$ = SVG_setcolorBackground$(255;0;255)
+#def SVG_colorBackground_purple$ = SVG_setcolorBackground$(128;0;128) 
+#def SVG_colorBackground_orange$ = SVG_setcolorBackground$(255;140;0)
+#def SVG_colorBackground_gray$ = SVG_setcolorBackground$(190;190;190)
+#def SVG_colorBackground_darkred$ = SVG_setcolorBackground$(150;0;0)
+#def SVG_colorBackground_darkgreen$ = SVG_setcolorBackground$(0;100;0)
+#def SVG_colorBackground_darkblue$ = SVG_setcolorBackground$(0;0;100)
+#def SVG_colorBackground_darkyellow$ = SVG_setcolorBackground$(200;200;0)
+#def SVG_colorBackground_darkcyan$ = SVG_setcolorBackground$(0;150;150)
+#def SVG_colorBackground_darkmagenta$ = SVG_setcolorBackground$(150;0;150)
+#def SVG_colorBackground_darkpurple$ = SVG_setcolorBackground$(50;0;50)
+#def SVG_colorBackground_darkorange$ = SVG_setcolorBackground$(170;80;0)
+#def SVG_colorBackground_darkgray$ = SVG_setcolorBackground$(100;100;100)
+#def SVG_colorBackground_lightred$ = SVG_setcolorBackground$(250;150;150)
+#def SVG_colorBackground_lightgreen$ = SVG_setcolorBackground$(150;250;150)
+#def SVG_colorBackground_lightblue$ = SVG_setcolorBackground$(180;180;255)
+#def SVG_colorBackground_lightyellow$ = SVG_setcolorBackground$(255;255;120)
+#def SVG_colorBackground_lightcyan$ = SVG_setcolorBackground$(120;255;255)
+#def SVG_colorBackground_lightmagenta$ = SVG_setcolorBackground$(255;180;255)
+#def SVG_colorBackground_lightpurple$ = SVG_setcolorBackground$(240;140;240)
+#def SVG_colorBackground_lightorange$ = SVG_setcolorBackground$(255;220;120)
+#def SVG_colorBackground_lightgray$ = SVG_setcolorBackground$(230;230;230)
+#def SVG_colorBackground_random$ = SVG_setcolorBackground$(SVG_randomNumber$;SVG_randomNumber$;SVG_randomNumber$)
+'<!-- ---------------------------------------------- -->'
 #def SVG_begin$(drawing_X$; drawing_Y$)
 	#val
 	#hide
 	SVG_pointerX = 0
 	SVG_pointerY = 0
-	SVG_sizeX = drawing_X$
-	SVG_sizeY = drawing_Y$
+	SVG_sizeX = abs(drawing_X$)
+	SVG_sizeY = abs(drawing_Y$)
+	#if SVG_sizeX ≤ 5
+		SVG_sizeX = 5
+	#end if
+	#if SVG_sizeY ≤ 5
+		SVG_sizeY = 5
+	#end if
+	SVG_scaleFactor = 1
 	#show
-	'<svg viewbox="'0' '0' 'drawing_X$' 'drawing_Y$'" xmlns="http://www.w3.org/2000/svg" version="1.1" style="font-size:16px; width:'drawing_X$'px; height:'drawing_Y$'px">
-	'<rect x="'0'" y="'0'" width="'drawing_X$'" height="'drawing_Y$'" style="stroke:black; stroke-width:1; fill:black; fill-opacity:0.2; stroke-opacity:0.1" />
+	'<svg viewbox="'0' '0' 'SVG_sizeX' 'SVG_sizeY'" xmlns="http://www.w3.org/2000/svg" version="1.1" style="font-size:'SVG_fontsize'px; width:'SVG_sizeX'px; height:'SVG_sizeY'px">
+	SVG_rect$(SVG_sizeX; SVG_sizeY)
+	SVG_move$(SVG_sizeX*-1; SVG_sizeY*-1)
 #end def
-
+'<!-- ---------------------------------------------- -->'
 #def SVG_end$
 	#hide
 	#show
 	'</svg>
 #end def'
-
+'<!-- ---------------------------------------------- -->'
 #def SVG_pointer$
 	#show
 	'<circle cx="'SVG_pointerX'" cy="'SVG_pointerY'" r="'4'" style="fill:red" />
 #end def'
-
+'<!-- ---------------------------------------------- -->'
 #def SVG_move$(drawing_X$; drawing_Y$)
 	#val
 	#hide
-	SVG_pointerX = SVG_pointerX + drawing_X$
-	SVG_pointerY = SVG_pointerY + drawing_Y$
+	SVG_pointerX = SVG_pointerX + drawing_X$*SVG_scaleFactor
+	SVG_pointerY = SVG_pointerY + drawing_Y$*SVG_scaleFactor
 #end def
-
-
-
+#def SVG_move_to$(drawing_X$; drawing_Y$)
+	#val
+	#hide
+	SVG_pointerX = drawing_X$*SVG_scaleFactor
+	SVG_pointerY = drawing_Y$*SVG_scaleFactor
+#end def
+#def SVG_moveX$(drawing_X$) = SVG_move$(drawing_X$; 0) 
+#def SVG_moveY$(drawing_Y$) = SVG_move$(0; drawing_Y$) 
+#def SVG_move_center$ = SVG_move_to$( SVG_sizeX*0.5/SVG_scaleFactor  ; SVG_sizeY*0.5/SVG_scaleFactor)
+#def SVG_move_n$ = SVG_move_to$( SVG_sizeX*0.5/SVG_scaleFactor  ; SVG_sizeY*0/SVG_scaleFactor) 
+#def SVG_move_s$ = SVG_move_to$( SVG_sizeX*0.5/SVG_scaleFactor  ; SVG_sizeY*1/SVG_scaleFactor) 
+#def SVG_move_w$ = SVG_move_to$( SVG_sizeX*0/SVG_scaleFactor  ; SVG_sizeY*0.5/SVG_scaleFactor) 
+#def SVG_move_e$ = SVG_move_to$( SVG_sizeX*1/SVG_scaleFactor  ; SVG_sizeY*0.5/SVG_scaleFactor)
+#def SVG_move_ne$ = SVG_move_to$( SVG_sizeX*1/SVG_scaleFactor  ; SVG_sizeY*0/SVG_scaleFactor) 
+#def SVG_move_nw$ = SVG_move_to$( SVG_sizeX*0/SVG_scaleFactor  ; SVG_sizeY*0/SVG_scaleFactor) 
+#def SVG_move_sw$ = SVG_move_to$( SVG_sizeX*0/SVG_scaleFactor  ; SVG_sizeY*1/SVG_scaleFactor) 
+#def SVG_move_se$ = SVG_move_to$( SVG_sizeX*1/SVG_scaleFactor  ; SVG_sizeY*1/SVG_scaleFactor) 
+'<!-- ---------------------------------------------- -->'
 #def SVG_line$(drawing_X$; drawing_Y$)
 	#val
 	#show
-	'<line x1="'SVG_pointerX'" y1="'SVG_pointerY'" x2="'SVG_pointerX + drawing_X$'" y2="'SVG_pointerY + drawing_Y$'" style="stroke:black; stroke-width:2; stroke-opacity:0.8" />
+	'<line x1="'SVG_pointerX'" y1="'SVG_pointerY'" x2="'SVG_pointerX + drawing_X$*SVG_scaleFactor'" y2="'SVG_pointerY + drawing_Y$*SVG_scaleFactor'" style="stroke:'SVG_getcolorLine$'; stroke-width:'SVG_LineWidth'; stroke-opacity:'SVG_LineOpacity'" />
 	SVG_move$(drawing_X$; drawing_Y$)
 #end def
-
+#def SVG_lineX$(drawing_X$) = SVG_line$(drawing_X$; 0) 
+#def SVG_lineY$(drawing_Y$) = SVG_line$(0; drawing_Y$) 
+'<!-- ---------------------------------------------- -->'
 #def SVG_rect$(drawing_X$; drawing_Y$)
 	#val
 	#show
-	'<rect x="'SVG_pointerX'" y="'SVG_pointerY'" width="'drawing_X$'" height="'drawing_Y$'" style="stroke:black; stroke-width:2; fill:yellow; fill-opacity:0.2; stroke-opacity:0.8" />
+	'<rect x="'SVG_pointerX'" y="'SVG_pointerY'" width="'drawing_X$*SVG_scaleFactor'" height="'drawing_Y$*SVG_scaleFactor'" style="stroke:'SVG_getcolorLine$'; stroke-width:'SVG_LineWidth'; fill:'SVG_getcolorBackground$'; fill-opacity:'SVG_BackgroundOpacity'; stroke-opacity:'SVG_LineOpacity'" />
 	SVG_move$(drawing_X$; drawing_Y$)
 #end def
-
+'<!-- ---------------------------------------------- -->'
 #def SVG_text$(drawing_TEXT$)
 	#val
 	#show
-	'<text x="'SVG_pointerX'" y="'SVG_pointerY'" text-anchor="middle" fill="red" style="font-size:32px;">'drawing_TEXT$'</text>'
+	'<text x="'SVG_pointerX'" y="'SVG_pointerY'" text-anchor="middle" fill="'SVG_getcolorText$'" style="font-size:'SVG_fontsize'px;">'drawing_TEXT$'</text>'
 #end def
-
-
+'<!-- ---------------------------------------------- -->'
 #show
+"import EasySVG
