@@ -1,0 +1,60 @@
+#hide
+SVG_sizeX = 0
+SVG_sizeY = 0
+SVG_pointerX = 0
+SVG_pointerY = 0
+
+#def SVG_begin$(drawing_X$; drawing_Y$)
+	#val
+	#hide
+	SVG_pointerX = 0
+	SVG_pointerY = 0
+	SVG_sizeX = drawing_X$
+	SVG_sizeY = drawing_Y$
+	#show
+	'<svg viewbox="'0' '0' 'drawing_X$' 'drawing_Y$'" xmlns="http://www.w3.org/2000/svg" version="1.1" style="font-size:16px; width:'drawing_X$'px; height:'drawing_Y$'px">
+	'<rect x="'0'" y="'0'" width="'drawing_X$'" height="'drawing_Y$'" style="stroke:black; stroke-width:1; fill:black; fill-opacity:0.2; stroke-opacity:0.1" />
+#end def
+
+#def SVG_end$
+	#hide
+	#show
+	'</svg>
+#end def'
+
+#def SVG_pointer$
+	#show
+	'<circle cx="'SVG_pointerX'" cy="'SVG_pointerY'" r="'4'" style="fill:red" />
+#end def'
+
+#def SVG_move$(drawing_X$; drawing_Y$)
+	#val
+	#hide
+	SVG_pointerX = SVG_pointerX + drawing_X$
+	SVG_pointerY = SVG_pointerY + drawing_Y$
+#end def
+
+
+
+#def SVG_line$(drawing_X$; drawing_Y$)
+	#val
+	#show
+	'<line x1="'SVG_pointerX'" y1="'SVG_pointerY'" x2="'SVG_pointerX + drawing_X$'" y2="'SVG_pointerY + drawing_Y$'" style="stroke:black; stroke-width:2; stroke-opacity:0.8" />
+	SVG_move$(drawing_X$; drawing_Y$)
+#end def
+
+#def SVG_rect$(drawing_X$; drawing_Y$)
+	#val
+	#show
+	'<rect x="'SVG_pointerX'" y="'SVG_pointerY'" width="'drawing_X$'" height="'drawing_Y$'" style="stroke:black; stroke-width:2; fill:yellow; fill-opacity:0.2; stroke-opacity:0.8" />
+	SVG_move$(drawing_X$; drawing_Y$)
+#end def
+
+#def SVG_text$(drawing_TEXT$)
+	#val
+	#show
+	'<text x="'SVG_pointerX'" y="'SVG_pointerY'" text-anchor="middle" fill="red" style="font-size:32px;">'drawing_TEXT$'</text>'
+#end def
+
+
+#show

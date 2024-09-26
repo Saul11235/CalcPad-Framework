@@ -1,0 +1,28 @@
+"Test view point"
+#include ../../Framework/EasySVG.cpd
+'<hr />
+'<h3> dibujo  20x15</h6>'
+
+SVG_begin$(20; 15)
+SVG_pointer$
+SVG_end$
+
+'<hr />
+'<h3> dibujo  130x25</h6>'
+SVG_begin$(130; 25)
+SVG_pointer$
+SVG_end$
+
+'<hr />
+'<h3> dibujo  400x350</h6>'
+
+SVG_begin$(400; 350)
+SVG_pointer$
+SVG_end$
+
+
+
+
+
+
+

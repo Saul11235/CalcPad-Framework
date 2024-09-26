@@ -1,0 +1,17 @@
+"Test line"
+#include ../../Framework/EasySVG.cpd
+
+SVG_begin$(400; 350)
+SVG_move$(20; 20)
+SVG_pointer$
+SVG_line$(100; 100)
+SVG_line$(40; 100)
+SVG_line$(100; 100)
+SVG_pointer$
+SVG_end$
+
+
+
+
+
+

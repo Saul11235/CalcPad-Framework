@@ -1,0 +1,19 @@
+"Test view point"
+#include ../../Framework/EasySVG.cpd
+
+SVG_begin$(400; 350)
+SVG_pointer$
+SVG_move$(100; 100)
+SVG_pointer$
+SVG_move$(40; 100)
+SVG_pointer$
+SVG_move$(100; 100)
+SVG_pointer$
+SVG_end$
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+"Test create DRAWING
+#include ../../Framework/EasySVG.cpd
+'<hr />
+'<h3> dibujo  20x15</h6>'
+
+SVG_begin$(20; 15)
+SVG_end$
+
+'<hr />
+'<h3> dibujo  30x25</h6>'
+SVG_begin$(30; 25)
+SVG_end$
+
+'<hr />
+'<h3> dibujo  100x50</h6>'
+
+SVG_begin$(100; 50)
+SVG_end$

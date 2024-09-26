@@ -1,0 +1,19 @@
+"Test text"
+#include ../../Framework/EasySVG.cpd
+
+SVG_begin$(400; 350)
+SVG_move$(60; 10)
+SVG_pointer$
+SVG_move$(100; 100)
+SVG_text$("My text AAA")
+SVG_move$(40; 100)
+SVG_text$("My text BBB")
+SVG_move$(100; 100)
+SVG_pointer$
+SVG_end$
+
+
+
+
+
+

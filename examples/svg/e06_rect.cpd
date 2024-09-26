@@ -1,0 +1,12 @@
+"Test Rect"
+#include ../../Framework/EasySVG.cpd
+
+SVG_begin$(400; 350)
+SVG_move$(20; 20)
+SVG_pointer$
+SVG_rect$(100; 100)
+SVG_rect$(40; 100)
+SVG_rect$(100; 100)
+SVG_pointer$
+SVG_end$
+
