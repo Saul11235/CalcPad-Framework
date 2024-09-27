@@ -1,0 +1,77 @@
+"Test view point"
+#include ../../Framework/EasySVG.cpd
+SVG_colorText_blue$
+
+'no comand
+
+SVG_begin$(140; 100)
+SVG_scaleX$(2)
+SVG_pointer$
+SVG_text$("abc123")
+SVG_end$
+
+
+'center
+SVG_begin$(140; 100)
+SVG_scaleX$(8)
+SVG_move_center$
+SVG_pointer$
+SVG_text$("abc123")
+SVG_end$
+
+'n
+SVG_begin$(140; 100)
+SVG_move_n$
+SVG_pointer$
+SVG_text$("abc123")
+SVG_end$
+
+'s
+SVG_begin$(140; 100)
+SVG_move_s$
+SVG_pointer$
+SVG_text$("abc123")
+SVG_end$
+
+
+'w
+SVG_begin$(140; 100)
+SVG_move_w$
+SVG_pointer$
+SVG_text$("abc123")
+SVG_end$
+
+'e
+SVG_begin$(140; 100)
+SVG_move_e$
+SVG_pointer$
+SVG_text$("abc123")
+SVG_end$
+
+'ne
+SVG_begin$(140; 100)
+SVG_move_ne$
+SVG_pointer$
+SVG_text$("abc123")
+SVG_end$
+
+'nw
+SVG_begin$(140; 100)
+SVG_move_nw$
+SVG_pointer$
+SVG_text$("abc123")
+SVG_end$
+
+'se
+SVG_begin$(140; 100)
+SVG_move_se$
+SVG_pointer$
+SVG_text$("abc123")
+SVG_end$
+
+'sw
+SVG_begin$(140; 100)
+SVG_move_sw$
+SVG_pointer$
+SVG_text$("abc123")
+SVG_end$

@@ -64,6 +64,11 @@ SVG_fontsize = 16
 #def SVG_colorText_lightorange$ = SVG_setcolorText$(255;220;120)
 #def SVG_colorText_lightgray$ = SVG_setcolorText$(230;230;230)
 #def SVG_colorText_random$ = SVG_setcolorText$(SVG_randomNumber$;SVG_randomNumber$;SVG_randomNumber$)
+#def SVG_text$(drawing_TEXT$)
+	#val
+	#show
+	'<text x="'SVG_pointerX'" y="'SVG_pointerY'" text-anchor="middle" fill="'SVG_getcolorText$'" style="font-size:'SVG_fontsize'px;">'drawing_TEXT$'</text>'
+#end def
 '<!-- ---------------------------------------------- -->'
 SVG_colorLineR = 0'<!--   Color RGB Line--> 
 SVG_colorLineG = 0
@@ -210,12 +215,6 @@ SVG_BackgroundOpacity = 0.8
 	#show
 	'<rect x="'SVG_pointerX'" y="'SVG_pointerY'" width="'drawing_X$*SVG_scaleFactor'" height="'drawing_Y$*SVG_scaleFactor'" style="stroke:'SVG_getcolorLine$'; stroke-width:'SVG_LineWidth'; fill:'SVG_getcolorBackground$'; fill-opacity:'SVG_BackgroundOpacity'; stroke-opacity:'SVG_LineOpacity'" />
 	SVG_move$(drawing_X$; drawing_Y$)
-#end def
-'<!-- ---------------------------------------------- -->'
-#def SVG_text$(drawing_TEXT$)
-	#val
-	#show
-	'<text x="'SVG_pointerX'" y="'SVG_pointerY'" text-anchor="middle" fill="'SVG_getcolorText$'" style="font-size:'SVG_fontsize'px;">'drawing_TEXT$'</text>'
 #end def
 '<!-- ---------------------------------------------- -->'
 #def SVG_circle$(drawing_RADIUS$)
@@ -641,6 +640,4 @@ SVG_BackgroundOpacity = 0.8
 	  SVG_move$(SVG_storageX ; SVG_storageY)
 #end def
 '<!-- ---------------------------------------------- -->'
-
 #show
-"import EasySVG

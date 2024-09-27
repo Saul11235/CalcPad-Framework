@@ -1,5 +1,3 @@
-"Easy concrete
-"Easycpd dimension
 #hide
 SVG_sizeX = 5
 SVG_sizeY = 5
@@ -626,4 +624,3 @@ SVG_storageY = draw_Y1$ + draw_Y2$ + draw_Y3$ + draw_Y4$ + draw_Y5$ + draw_Y6$ +
 SVG_move$(SVG_storageX ; SVG_storageY)
 #end def
 #show
-"import EasySVG
