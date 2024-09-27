@@ -35,9 +35,46 @@ def getFullCode():
     for x in getFiles("../Framework",".cpd"):code.append(clearText("../Framework/"+x))
     return "\n".join(code)
 
-def writeFile(path,content):file=open(path,content);file.write(content);file.close()
+def writeFile(path,content):file=open(path,"w",encoding="utf-8");file.write(content);file.close()
+
+def getVars(code):
+    storage=[]
+    onMacro=False
+    for x in code.split("\n"):
+        if not(onMacro) and x.startswith("#def ") and ("=" in x):
+            x=x.replace("#def ","")
+            storage.append(x[: x.find("=")].strip()[:])
+        elif  not(onMacro) and x.startswith("#def ") and not("=" in x):
+            onMacro=True
+            x=x.replace("#def ","")
+            storage.append(x.strip()[:])
+        elif onMacro and x.startswith("#end def"):
+            onMacro=False
+        elif not(onMacro) and ("=" in x):
+            storage.append(x[: x.find("=")].strip()[:])
+    storage=list(set(storage))
+    storage.sort()
+    var=[]
+    macros=[]
+    for x in storage:
+        if "$" in x:macros.append([x[: x.find("(")].strip()[:],x[::]])
+        else: var.append(x[::])
+    return [var,macros]
+
+def makeREADME(varArray):
+    txt="# EasyFrame -  by Edwin Saul\n\n"
+    for x in varArray[0]:
+        txt+="### "+x+"\n  framework variable\n\n"
+    for x in varArray[1]:
+        txt+="### "+x[0]+"\n  "+x[1]+"\n\n"
+    writeFile("./README.md",txt)
 
 
 fullCode=getFullCode()
-writeFile("../easyFrame.cpd",fullCode)
+writeFile("../EasyFrame.cpd",fullCode)
+writeFile("../Examples/easyFrame.cpd",fullCode)
+libvars=getVars(fullCode)
+makeREADME(libvars)
+
+
 

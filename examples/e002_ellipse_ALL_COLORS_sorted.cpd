@@ -1,0 +1,139 @@
+"CIRCLEAll COLORS Sorted"
+#include EasyFrame.cpd
+
+valor = 50
+separacion = 1
+radiusX = .45
+radiusY = .25
+
+SVG_begin$(valor*11; valor*6)
+SVG_LineWidth = 2
+SVG_scaleX$(10)
+SVG_move$(.8; .5)
+
+SVG_colorBackground_black$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_white$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+SVG_move$(-2; separacion)
+
+SVG_colorBackground_lightred$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_lightorange$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_lightyellow$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_lightgreen$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_lightcyan$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_lightblue$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_lightpurple$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_lightmagenta$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_lightgray$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+SVG_move$(-9; separacion)
+
+SVG_colorBackground_red$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_orange$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_yellow$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_green$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_cyan$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_blue$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_purple$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+
+SVG_colorBackground_magenta$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_gray$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+SVG_move$(-9; separacion)
+
+SVG_colorBackground_darkred$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_darkorange$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_darkyellow$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_darkgreen$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_darkcyan$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_darkblue$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_darkpurple$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_darkmagenta$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_colorBackground_darkgray$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+SVG_move$(-9; separacion)
+
+SVG_colorBackground_random$
+SVG_ellipse$(radiusX; radiusY)
+SVG_moveX$(1)
+
+SVG_end$
