@@ -6,7 +6,7 @@ valor = 60
 
 SVG_begin$(valor*9; valor*5)
 SVG_LineWidth = 2
-SVG_scaleX$(9)
+SVG_scaleX$(10)
 
 SVG_colorBackground_black$
 SVG_rect$(1;1)
@@ -151,7 +151,6 @@ SVG_moveY$(-1)
 
 
 SVG_end$
-
 
 
 

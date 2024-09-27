@@ -1,0 +1,32 @@
+'<h1>Constructive Footing</h1>
+'By Edwin Saul https://edwinsaul.com'
+'example using Calcpad Framework - EasySVG'
+
+#include ../../Framework/EasySVG.cpd
+ 
+footing_width = ? {3}' m
+footing_thickness = ? {.5}'m
+column_width = ? {.45}'m
+#hide
+drawing_width = footing_width*1.2
+
+#def drawing$
+	 SVG_begin$(400; 400)
+	SVG_scaleX$(drawing_width)
+	SVG_move_center$
+	SVG_moveX$(footing_width*0.5)
+	SVG_lineY$(footing_thickness)
+	SVG_lineX$(footing_width*-1)
+	SVG_lineY$(footing_thickness*-1)
+	SVG_lineX$((footing_width-column_width )/2)
+	SVG_lineY$(footing_width*-0.5)
+	SVG_lineX$(column_width)
+	SVG_lineY$(footing_width*0.5)
+	SVG_lineX$((footing_width-column_width )/2)
+	SVG_move_center$
+	SVG_moveY$(footing_thickness*1.5)
+	SVG_text$(footing_width' m' )
+	SVG_end$
+#end def
+
+drawing$

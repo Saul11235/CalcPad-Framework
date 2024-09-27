@@ -1,0 +1,19 @@
+"Test poly"
+#include ../../Framework/EasySVG.cpd
+
+SVG_begin$(400; 350)
+SVG_LineWidth = 3
+SVG_colorLine_green$
+SVG_scaleX$(8)
+SVG_move_n$
+SVG_move$(-0.3;0.4)
+SVG_pointer$
+SVG_line2$(3; 4; -1; 0.5)
+SVG_pointer$
+SVG_colorLine_blue$
+SVG_line5$(-4;-1;2;-1;-2.5;0;0;2;1;-0.3)
+
+SVG_pointer$
+SVG_end$
+
+

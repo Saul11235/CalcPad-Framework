@@ -1,0 +1,19 @@
+"Test Rect"
+#include ../../Framework/EasySVG.cpd
+
+SVG_begin$(400; 350)
+SVG_colorBackground_lightgreen$
+SVG_scaleX$(8)
+SVG_move_n$
+SVG_move$(-0.3;0.4)
+SVG_pointer$
+SVG_poly2$(3; 4; -1; 0.5)
+SVG_pointer$
+SVG_colorBackground_lightblue$
+SVG_poly5$(-4;-1;2;-1;-2.5;0;0;2;1;-0.3)
+
+SVG_pointer$
+SVG_end$
+
+
+
