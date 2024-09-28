@@ -1,0 +1,15 @@
+#include ../../Framework/EasySVG.cpd
+#def test$(style$; name$)
+	style$
+	SVG_begin$(400;20)
+	SVG_move_s$
+	SVG_moveY$(-4)
+	SVG_text$(name$)
+	SVG_end$
+#end def
+"Test styles"
+test$(SVG_style_simple$;"SVG_style_simple")
+test$(SVG_style_invert$;"SVG_style_invert")
+test$(SVG_style_concrete$;"SVG_style_concrete")
+test$(SVG_style_concrete1$;"SVG_style_concrete1")
+test$(SVG_style_concrete2$;"SVG_style_concrete2")

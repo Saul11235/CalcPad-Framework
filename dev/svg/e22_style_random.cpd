@@ -1,0 +1,13 @@
+#include ../../Framework/EasySVG.cpd
+#def test$(style$; name$)
+	style$
+	SVG_begin$(400;20)
+	SVG_move_s$
+	SVG_moveY$(-4)
+	SVG_text$(name$)
+	SVG_end$
+#end def
+"Test styles"
+#repeat 40
+	test$(SVG_style_random$;"SVG_style_random")
+#loop

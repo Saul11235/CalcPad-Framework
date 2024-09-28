@@ -726,4 +726,46 @@ SVG_BackgroundOpacity = 0.8
 	  SVG_move$(SVG_storageX ; SVG_storageY)
 #end def
 '<!-- ---------------------------------------------- -->'
+#def SVG_style_simple$
+	#hide
+	SVG_colorBackground_white$
+	SVG_colorText_black$
+	SVG_colorLine_black$
+#end def
+'<!-- ---------------------------------------------- -->'
+#def SVG_style_invert$
+	#hide
+	SVG_colorBackground_black$
+	SVG_colorText_white$
+	SVG_colorLine_white$
+#end def
+'<!-- ---------------------------------------------- -->'
+#def SVG_style_concrete$
+	#hide
+	SVG_colorBackground_gray$
+	SVG_colorText_black$
+	SVG_colorLine_darkgray$
+#end def
+'<!-- ---------------------------------------------- -->'
+#def SVG_style_concrete1$
+	#hide
+	SVG_colorBackground_darkgray$
+	SVG_colorText_black$
+	SVG_colorLine_gray$
+#end def
+'<!-- ---------------------------------------------- -->'
+#def SVG_style_concrete2$
+	#hide
+	SVG_colorBackground_lightgray$
+	SVG_colorText_black$
+	SVG_colorLine_gray$
+#end def
+'<!-- ---------------------------------------------- -->'
+#def SVG_style_random$
+	#hide
+	SVG_colorBackground_random$
+	SVG_colorText_random$
+	SVG_colorLine_random$
+#end def
+'<!-- ---------------------------------------------- -->'
 #show
