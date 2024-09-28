@@ -1,0 +1,27 @@
+"Test import EasySVG+EasyDIST
+
+#include ../../Framework/EasySVG.cpd
+#include ../../Framework/EasyDIST.cpd
+'<hr />
+'<h3> dibujo  20x15</h6>'
+SVG_style_random$
+SVG_begin$(20; 15)
+SVG_end$
+
+'<hr />
+'<h3> dibujo  30x25</h6>'
+SVG_style_random$
+miMacro$
+"k
+SVG_style_random$
+miMacro$
+"k
+SVG_style_random$
+miMacro$
+
+
+'<hr />
+'<h3> dibujo  100x50</h6>'
+SVG_style_random$
+SVG_begin$(100; 50)
+SVG_end$

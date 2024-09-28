@@ -1,0 +1,11 @@
+#hide
+
+
+#def miMacro$
+	SVG_begin$(40; 40)
+	SVG_line$(30; 30)
+	SVG_end$
+#end def
+
+
+#show
