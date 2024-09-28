@@ -36,6 +36,9 @@
 ### SVG_colorTextR
   framework variable
 
+### SVG_fontref
+  framework variable
+
 ### SVG_fontsize
   framework variable
 
@@ -58,6 +61,9 @@
   framework variable
 
 ### SVG_storageY
+  framework variable
+
+### SVG_text_rotation
   framework variable
 
 ### SVG_begin$
@@ -459,6 +465,72 @@
 ### SVG_move_w
   SVG_move_w$
 
+### SVG_opacityBackground0
+  SVG_opacityBackground0$
+
+### SVG_opacityBackground1
+  SVG_opacityBackground1$
+
+### SVG_opacityBackground10
+  SVG_opacityBackground10$
+
+### SVG_opacityBackground2
+  SVG_opacityBackground2$
+
+### SVG_opacityBackground3
+  SVG_opacityBackground3$
+
+### SVG_opacityBackground4
+  SVG_opacityBackground4$
+
+### SVG_opacityBackground5
+  SVG_opacityBackground5$
+
+### SVG_opacityBackground6
+  SVG_opacityBackground6$
+
+### SVG_opacityBackground7
+  SVG_opacityBackground7$
+
+### SVG_opacityBackground8
+  SVG_opacityBackground8$
+
+### SVG_opacityBackground9
+  SVG_opacityBackground9$
+
+### SVG_opacityLine0
+  SVG_opacityLine0$
+
+### SVG_opacityLine1
+  SVG_opacityLine1$
+
+### SVG_opacityLine10
+  SVG_opacityLine10$
+
+### SVG_opacityLine2
+  SVG_opacityLine2$
+
+### SVG_opacityLine3
+  SVG_opacityLine3$
+
+### SVG_opacityLine4
+  SVG_opacityLine4$
+
+### SVG_opacityLine5
+  SVG_opacityLine5$
+
+### SVG_opacityLine6
+  SVG_opacityLine6$
+
+### SVG_opacityLine7
+  SVG_opacityLine7$
+
+### SVG_opacityLine8
+  SVG_opacityLine8$
+
+### SVG_opacityLine9
+  SVG_opacityLine9$
+
 ### SVG_pointer
   SVG_pointer$
 
@@ -543,6 +615,87 @@
 ### SVG_setcolorText$
   SVG_setcolorText$(SVG_red$; SVG_green$; SVG_blue$)
 
+### SVG_setopacityBackground$
+  SVG_setopacityBackground$(SVG_opacity_var$)
+
+### SVG_setopacityLine$
+  SVG_setopacityLine$(SVG_opacity_var$)
+
+### SVG_setsizeText$
+  SVG_setsizeText$(SVG_size$)
+
+### SVG_setwidthLine$
+  SVG_setwidthLine$(SVG_width_var$)
+
 ### SVG_text$
   SVG_text$(drawing_TEXT$)
+
+### SVG_text_1
+  SVG_text_1$
+
+### SVG_text_10
+  SVG_text_10$
+
+### SVG_text_11
+  SVG_text_11$
+
+### SVG_text_12
+  SVG_text_12$
+
+### SVG_text_2
+  SVG_text_2$
+
+### SVG_text_3
+  SVG_text_3$
+
+### SVG_text_4
+  SVG_text_4$
+
+### SVG_text_5
+  SVG_text_5$
+
+### SVG_text_6
+  SVG_text_6$
+
+### SVG_text_7
+  SVG_text_7$
+
+### SVG_text_8
+  SVG_text_8$
+
+### SVG_text_9
+  SVG_text_9$
+
+### SVG_widthLine0
+  SVG_widthLine0$
+
+### SVG_widthLine1
+  SVG_widthLine1$
+
+### SVG_widthLine10
+  SVG_widthLine10$
+
+### SVG_widthLine2
+  SVG_widthLine2$
+
+### SVG_widthLine3
+  SVG_widthLine3$
+
+### SVG_widthLine4
+  SVG_widthLine4$
+
+### SVG_widthLine5
+  SVG_widthLine5$
+
+### SVG_widthLine6
+  SVG_widthLine6$
+
+### SVG_widthLine7
+  SVG_widthLine7$
+
+### SVG_widthLine8
+  SVG_widthLine8$
+
+### SVG_widthLine9
+  SVG_widthLine9$
 

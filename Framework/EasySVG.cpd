@@ -27,6 +27,7 @@ SVG_colorTextR = 0'<!--   Color RGB text -->
 SVG_colorTextG = 0
 SVG_colorTextB = 0
 SVG_fontsize = 16
+SVG_fontref = 1
 #def SVG_getcolorText$ = 'rgb('SVG_colorTextR','SVG_colorTextG','SVG_colorTextB')'    
 #def SVG_setcolorText$(SVG_red$; SVG_green$; SVG_blue$)
 	#hide
@@ -34,6 +35,22 @@ SVG_fontsize = 16
 	SVG_colorTextG = SVG_green$
 	SVG_colorTextB = SVG_blue$
 #end def
+#def SVG_setsizeText$(SVG_size$)
+	#hide
+	SVG_fontsize = (SVG_size$)
+#end def
+#def SVG_text_1$ = SVG_setsizeText$(SVG_fontref*1 )
+#def SVG_text_2$ = SVG_setsizeText$(SVG_fontref*2 )
+#def SVG_text_3$ = SVG_setsizeText$(SVG_fontref*3 )
+#def SVG_text_4$ = SVG_setsizeText$(SVG_fontref*4 )
+#def SVG_text_5$ = SVG_setsizeText$(SVG_fontref*5 )
+#def SVG_text_6$ = SVG_setsizeText$(SVG_fontref*6 )
+#def SVG_text_7$ = SVG_setsizeText$(SVG_fontref*7 )
+#def SVG_text_8$ = SVG_setsizeText$(SVG_fontref*8 )
+#def SVG_text_9$ = SVG_setsizeText$(SVG_fontref*9 )
+#def SVG_text_10$ = SVG_setsizeText$(SVG_fontref*10 )
+#def SVG_text_11$ = SVG_setsizeText$(SVG_fontref*11 )
+#def SVG_text_12$ = SVG_setsizeText$(SVG_fontref*12 )
 #def SVG_colorText_black$ = SVG_setcolorText$(0;0;0)
 #def SVG_colorText_white$ = SVG_setcolorText$(255;255;255)
 #def SVG_colorText_red$ = SVG_setcolorText$(250;0;0)
@@ -64,10 +81,13 @@ SVG_fontsize = 16
 #def SVG_colorText_lightorange$ = SVG_setcolorText$(255;220;120)
 #def SVG_colorText_lightgray$ = SVG_setcolorText$(230;230;230)
 #def SVG_colorText_random$ = SVG_setcolorText$(SVG_randomNumber$;SVG_randomNumber$;SVG_randomNumber$)
+SVG_text_rotation = 0
 #def SVG_text$(drawing_TEXT$)
 	#val
 	#show
-	'<text x="'SVG_pointerX'" y="'SVG_pointerY'" text-anchor="middle" fill="'SVG_getcolorText$'" style="font-size:'SVG_fontsize'px;">'drawing_TEXT$'</text>'
+	'<text x="'SVG_pointerX'" y="'SVG_pointerY'" text-anchor="middle" fill="'SVG_getcolorText$'" style="font-size:'SVG_fontsize'px;" transform="rotate('SVG_text_rotation','SVG_pointerX' ,'SVG_pointerY' )">'drawing_TEXT$'</text>'
+	#hide
+	SVG_text_rotation = 0
 #end def
 '<!-- ---------------------------------------------- -->'
 SVG_colorLineR = 0'<!--   Color RGB Line--> 
@@ -75,13 +95,52 @@ SVG_colorLineG = 0
 SVG_colorLineB = 0
 SVG_LineWidth = 1
 SVG_LineOpacity = 0.8
-#def SVG_getcolorLine$ = 'rgb('SVG_colorLineR','SVG_colorLineG','SVG_colorLineB')'    
+
+#def SVG_getcolorLine$ = 'rgb('SVG_colorLineR','SVG_colorLineG','SVG_colorLineB')' 
+   
 #def SVG_setcolorLine$(SVG_red$; SVG_green$; SVG_blue$)
 	#hide
 	SVG_colorLineR = SVG_red$
 	SVG_colorLineG = SVG_green$
 	SVG_colorLineB = SVG_blue$
 #end def
+
+#def SVG_setwidthLine$(SVG_width_var$)
+	#hide
+	#val
+	SVG_LineWidth = SVG_width_var$
+#end def
+
+#def SVG_setopacityLine$(SVG_opacity_var$)
+	#hide
+	#val
+	SVG_LineOpacity = SVG_opacity_var$
+#end def
+
+#def SVG_widthLine0$ = SVG_setwidthLine$(0)
+#def SVG_widthLine1$ = SVG_setwidthLine$(0.5)
+#def SVG_widthLine2$ = SVG_setwidthLine$(1)
+#def SVG_widthLine3$ = SVG_setwidthLine$(1.5)
+#def SVG_widthLine4$ = SVG_setwidthLine$(2)
+#def SVG_widthLine5$ = SVG_setwidthLine$(4)
+#def SVG_widthLine6$ = SVG_setwidthLine$(6)
+#def SVG_widthLine7$ = SVG_setwidthLine$(8)
+#def SVG_widthLine8$ = SVG_setwidthLine$(10)
+#def SVG_widthLine9$ = SVG_setwidthLine$(12)
+#def SVG_widthLine10$ = SVG_setwidthLine$(15)
+
+#def SVG_opacityLine0$ = SVG_setopacityLine$(0)
+#def SVG_opacityLine1$ = SVG_setopacityLine$(0.1)
+#def SVG_opacityLine2$ = SVG_setopacityLine$(0.2)
+#def SVG_opacityLine3$ = SVG_setopacityLine$(0.3)
+#def SVG_opacityLine4$ = SVG_setopacityLine$(0.4)
+#def SVG_opacityLine5$ = SVG_setopacityLine$(0.5)
+#def SVG_opacityLine6$ = SVG_setopacityLine$(0.6)
+#def SVG_opacityLine7$ = SVG_setopacityLine$(0.7)
+#def SVG_opacityLine8$ = SVG_setopacityLine$(0.8)
+#def SVG_opacityLine9$ = SVG_setopacityLine$(0.9)
+#def SVG_opacityLine10$ = SVG_setopacityLine$(1)
+
 #def SVG_colorLine_black$ = SVG_setcolorLine$(0;0;0)
 #def SVG_colorLine_white$ = SVG_setcolorLine$(255;255;255)
 #def SVG_colorLine_red$ = SVG_setcolorLine$(250;0;0)
@@ -112,18 +171,40 @@ SVG_LineOpacity = 0.8
 #def SVG_colorLine_lightorange$ = SVG_setcolorLine$(255;220;120)
 #def SVG_colorLine_lightgray$ = SVG_setcolorLine$(230;230;230)
 #def SVG_colorLine_random$ = SVG_setcolorLine$(SVG_randomNumber$;SVG_randomNumber$;SVG_randomNumber$)
+
 '<!-- ---------------------------------------------- -->'
 SVG_colorBackgroundR = 255'<!--   Color RGB Background --> 
 SVG_colorBackgroundG = 255
 SVG_colorBackgroundB = 255
 SVG_BackgroundOpacity = 0.8
 #def SVG_getcolorBackground$ = 'rgb('SVG_colorBackgroundR','SVG_colorBackgroundG','SVG_colorBackgroundB')'    
+
 #def SVG_setcolorBackground$(SVG_red$; SVG_green$; SVG_blue$)
 	#hide
 	SVG_colorBackgroundR = SVG_red$
 	SVG_colorBackgroundG = SVG_green$
 	SVG_colorBackgroundB = SVG_blue$
 #end def
+
+
+#def SVG_setopacityBackground$(SVG_opacity_var$)
+	#hide
+	#val
+	SVG_BackgroundOpacity = SVG_opacity_var$
+#end def
+
+#def SVG_opacityBackground0$ = SVG_setopacityBackground$(0)
+#def SVG_opacityBackground1$ = SVG_setopacityBackground$(0.1)
+#def SVG_opacityBackground2$ = SVG_setopacityBackground$(0.2)
+#def SVG_opacityBackground3$ = SVG_setopacityBackground$(0.3)
+#def SVG_opacityBackground4$ = SVG_setopacityBackground$(0.4)
+#def SVG_opacityBackground5$ = SVG_setopacityBackground$(0.5)
+#def SVG_opacityBackground6$ = SVG_setopacityBackground$(0.6)
+#def SVG_opacityBackground7$ = SVG_setopacityBackground$(0.7)
+#def SVG_opacityBackground8$ = SVG_setopacityBackground$(0.8)
+#def SVG_opacityBackground9$ = SVG_setopacityBackground$(0.9)
+#def SVG_opacityBackground10$ = SVG_setopacityBackground$(1)
+
 #def SVG_colorBackground_black$ = SVG_setcolorBackground$(0;0;0)
 #def SVG_colorBackground_white$ = SVG_setcolorBackground$(255;255;255)
 #def SVG_colorBackground_red$ = SVG_setcolorBackground$(250;0;0)
@@ -167,7 +248,12 @@ SVG_BackgroundOpacity = 0.8
 	#end if
 	#if SVG_sizeY ≤ 5
 		SVG_sizeY = 5
+	#end if 
+	SVG_fontref = ((((SVG_sizeX^2 + SVG_sizeY^2)^0.5))/200)
+	#if SVG_fontref ≤ 3
+		SVG_fontref = 3
 	#end if
+	SVG_text_6$
 	SVG_scaleFactor = 1
 	#show
 	'<svg viewbox="'0' '0' 'SVG_sizeX' 'SVG_sizeY'" xmlns="http://www.w3.org/2000/svg" version="1.1" style="font-size:'SVG_fontsize'px; width:'SVG_sizeX'px; height:'SVG_sizeY'px">

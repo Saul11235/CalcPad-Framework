@@ -1,77 +1,104 @@
-"Test view point"
+"Test rotate text - style"
 #include ../../Framework/EasySVG.cpd
+
+'rotation
+SVG_text_rotation = -45
+SVG_colorBackground_orange$
 SVG_colorText_blue$
-
-'no comand
-
-SVG_begin$(140; 100)
+SVG_begin$(300; 40)
 SVG_scaleX$(2)
+SVG_move_center$
 SVG_pointer$
 SVG_text$("abc123")
 SVG_end$
 
-
-'center
-SVG_begin$(140; 100)
+'text 1
+SVG_begin$(30; 30)
 SVG_scaleX$(8)
 SVG_move_center$
 SVG_pointer$
 SVG_text$("abc123")
 SVG_end$
 
-'n
-SVG_begin$(140; 100)
-SVG_move_n$
+'200x30
+SVG_begin$( 200;30)
+SVG_scaleX$(8)
+SVG_move_center$
 SVG_pointer$
 SVG_text$("abc123")
 SVG_end$
 
-'s
-SVG_begin$(140; 100)
-SVG_move_s$
+'50
+SVG_begin$(50; 50)
+SVG_move_center$
 SVG_pointer$
 SVG_text$("abc123")
 SVG_end$
+SVG_fontref
+SVG_widthLine5$
 
 
-'w
-SVG_begin$(140; 100)
-SVG_move_w$
+
+'100
+SVG_opacityBackground5$
+SVG_begin$(100; 100)
+SVG_move_center$
 SVG_pointer$
 SVG_text$("abc123")
 SVG_end$
+SVG_fontref
+SVG_widthLine8$
 
-'e
-SVG_begin$(140; 100)
-SVG_move_e$
+
+'200
+SVG_begin$(200; 200)
+SVG_move_center$
 SVG_pointer$
 SVG_text$("abc123")
 SVG_end$
+SVG_fontref
+SVG_widthLine9$
 
-'ne
-SVG_begin$(140; 100)
-SVG_move_ne$
+'300
+SVG_begin$(300; 300)
+SVG_opacityLine5$
+SVG_move_center$
 SVG_pointer$
 SVG_text$("abc123")
 SVG_end$
+SVG_fontref
 
-'nw
-SVG_begin$(140; 100)
-SVG_move_nw$
+'400
+SVG_opacityBackground2$
+SVG_begin$(400; 400)
+SVG_move_center$
 SVG_pointer$
 SVG_text$("abc123")
 SVG_end$
+SVG_fontref
 
-'se
-SVG_begin$(140; 100)
-SVG_move_se$
+'600
+SVG_begin$(600; 601)
+SVG_move_center$
 SVG_pointer$
 SVG_text$("abc123")
 SVG_end$
+SVG_fontref
 
-'sw
-SVG_begin$(140; 100)
-SVG_move_sw$
+'800
+SVG_opacityLine2$
+SVG_begin$(800; 801)
+SVG_move_center$
 SVG_pointer$
 SVG_text$("abc123")
 SVG_end$
+SVG_fontref
+
+'1000
+SVG_begin$(1000; 1001)
+SVG_move_center$
+SVG_pointer$
+SVG_text$("	abc123")
+SVG_end$
+SVG_fontref
+
