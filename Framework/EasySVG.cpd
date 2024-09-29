@@ -286,6 +286,12 @@ SVG_BackgroundOpacity = 0.8
 #end def
 #def SVG_moveX$(drawing_X$) = SVG_move$(drawing_X$; 0) 
 #def SVG_moveY$(drawing_Y$) = SVG_move$(0; drawing_Y$) 
+#def SVG_moveA$(drawing_D$; drawing_A$)
+	#hide
+	#val
+	#deg
+	SVG_move$(drawing_D$*cos(drawing_A$); drawing_D$*sin(drawing_A$)*-1)
+#end def
 #def SVG_move_center$ = SVG_move_to$( SVG_sizeX*0.5/SVG_scaleFactor  ; SVG_sizeY*0.5/SVG_scaleFactor)
 #def SVG_move_n$ = SVG_move_to$( SVG_sizeX*0.5/SVG_scaleFactor  ; SVG_sizeY*0/SVG_scaleFactor) 
 #def SVG_move_s$ = SVG_move_to$( SVG_sizeX*0.5/SVG_scaleFactor  ; SVG_sizeY*1/SVG_scaleFactor) 
@@ -323,6 +329,12 @@ SVG_BackgroundOpacity = 0.8
 #end def
 #def SVG_lineX$(drawing_X$) = SVG_line$(drawing_X$; 0) 
 #def SVG_lineY$(drawing_Y$) = SVG_line$(0; drawing_Y$) 
+#def SVG_lineA$(drawing_D$; drawing_A$)
+	#hide
+	#val
+	#deg
+	SVG_line$(drawing_D$*cos(drawing_A$); drawing_D$*sin(drawing_A$)*-1)
+#end def
 '<!-- ---------------------------------------------- -->'
 #def SVG_poly1$(draw_X1$; draw_Y1$)
 	  #val
